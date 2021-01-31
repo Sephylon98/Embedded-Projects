@@ -53,7 +53,7 @@ int main(void)
 		while((TIFR & (1<<ICF1))==0);
 		TIMER = ICR1  + (65536 * OVF_Counter);
 		distance = (double)TIMER/14.575; // 58.30/4
-        dtostrf(distance, 2, 2, data); //Convert double to string
+                dtostrf(distance, 2, 2, data); //Convert double to string
 		strcat(data, " cm   "); //concatenate the two strings and place new string into data
 		LCD_StringPos("Ultrasonic",1,0);     
 		LCD_StringPos("Dist = ",2,0);
